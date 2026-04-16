@@ -95,7 +95,7 @@ Generate a personalized Cloud and AI career roadmap for them. Structure your res
 Be specific, encouraging, and practical. Reference their specific interests and goals throughout."""
 
             message = client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model="claude-haiku-4-5",
                 max_tokens=1000,
                 messages=[{"role": "user", "content": prompt}]
             )
