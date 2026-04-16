@@ -49,7 +49,7 @@ if st.button("Generate My Roadmap"):
     else:
         with st.spinner("Building your personalized roadmap..."):
             genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-            model = genai.GenerativeModel("gemini-2.0-flash")
+            model = genai.GenerativeModel("gemini-1.5-flash")
             
             prompt = f"""You are CloudPath AI, a career advisor specializing in Cloud and AI engineering careers.
 
