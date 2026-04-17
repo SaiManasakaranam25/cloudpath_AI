@@ -7,12 +7,23 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
+.stApp { background-color: #0a0f1e !important; }
+
 html, body, [class*="css"] {
-    font-family: 'Inter', sans-serif;
-    background-color: #0a0f1e;
-    color: #F5F5F0;
+    font-family: 'Inter', sans-serif !important;
+    background-color: #0a0f1e !important;
+    color: #F5F5F0 !important;
 }
-.block-container { padding: 2rem 2rem; max-width: 760px; }
+
+.block-container {
+    padding: 2rem 2rem !important;
+    max-width: 760px !important;
+    background-color: #0a0f1e !important;
+}
+
+p { color: #F5F5F0 !important; }
+span { color: #F5F5F0 !important; }
+label { color: #F5F5F0 !important; }
 
 .hero-header {
     background: linear-gradient(135deg, #0d1526 0%, #162032 100%);
@@ -24,43 +35,49 @@ html, body, [class*="css"] {
     text-align: center;
 }
 .hero-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin: 8px 0 10px 0;
-    letter-spacing: -0.5px;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 2.6rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 8px 0 10px 0 !important;
+    letter-spacing: -0.5px !important;
 }
 .hero-subtitle {
-    font-size: 0.8rem;
-    color: #1D9E75;
-    font-weight: 600;
-    margin: 0 0 8px 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 0.8rem !important;
+    color: #1D9E75 !important;
+    font-weight: 600 !important;
+    margin: 0 0 8px 0 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
 }
 .hero-tagline {
-    font-size: 0.95rem;
-    color: #94A3B8;
-    margin: 0;
+    font-size: 0.95rem !important;
+    color: #94A3B8 !important;
+    margin: 0 !important;
 }
 
+.q-wrap {
+    background: #0d1526;
+    border: 1px solid #2a3f5f;
+    border-radius: 12px;
+    padding: 20px 24px 16px 24px;
+    margin-bottom: 12px;
+}
 .q-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #1D9E75;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 4px;
-    margin-top: 20px;
-    display: block;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: #1D9E75 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 4px !important;
+    display: block !important;
 }
 .q-text {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #FFFFFF;
-    margin-bottom: 6px;
-    display: block;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    margin-bottom: 10px !important;
+    display: block !important;
 }
 
 div[data-testid="stSelectbox"] > div > div {
@@ -69,6 +86,8 @@ div[data-testid="stSelectbox"] > div > div {
     border-radius: 8px !important;
     color: #F5F5F0 !important;
 }
+div[data-testid="stSelectbox"] svg { fill: #94A3B8 !important; }
+
 div[data-testid="stMultiSelect"] > div > div {
     background-color: #1a2235 !important;
     border: 1px solid #2a3f5f !important;
@@ -90,65 +109,71 @@ span[data-baseweb="tag"] {
     font-size: 1rem !important;
     font-weight: 600 !important;
     width: 100% !important;
-    margin-top: 16px !important;
+    margin-top: 8px !important;
+    letter-spacing: 0.3px !important;
 }
 .stButton > button:hover {
     background: linear-gradient(135deg, #22b886 0%, #1D9E75 100%) !important;
 }
 
+.stWarning {
+    background-color: #1a2235 !important;
+    color: #F5F5F0 !important;
+}
+
 .roadmap-wrap {
-    background: #0d1526;
-    border: 1px solid #1D9E75;
-    border-radius: 16px;
-    padding: 28px;
-    margin-top: 24px;
+    background: #0d1526 !important;
+    border: 1px solid #1D9E75 !important;
+    border-radius: 16px !important;
+    padding: 28px !important;
+    margin-top: 24px !important;
 }
 .roadmap-heading {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid #1e2d40;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 14px !important;
+    border-bottom: 1px solid #1e2d40 !important;
 }
 .r-section {
-    background: #1a2235;
-    border-left: 3px solid #1D9E75;
-    border-radius: 8px;
-    padding: 16px 18px;
-    margin-bottom: 10px;
+    background: #1a2235 !important;
+    border-left: 3px solid #1D9E75 !important;
+    border-radius: 8px !important;
+    padding: 16px 18px !important;
+    margin-bottom: 10px !important;
 }
 .r-title {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #1D9E75;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: #1D9E75 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 8px !important;
 }
 .r-content {
-    font-size: 0.9rem;
-    color: #E2E8F0;
-    line-height: 1.8;
+    font-size: 0.9rem !important;
+    color: #E2E8F0 !important;
+    line-height: 1.8 !important;
 }
 .success-box {
-    background: #085041;
-    border: 1px solid #1D9E75;
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-    color: #9FE1CB;
-    font-size: 0.85rem;
-    margin-top: 14px;
+    background: #085041 !important;
+    border: 1px solid #1D9E75 !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    text-align: center !important;
+    color: #9FE1CB !important;
+    font-size: 0.85rem !important;
+    margin-top: 14px !important;
 }
 .footer-text {
-    text-align: center;
-    color: #4B5563;
-    font-size: 0.75rem;
-    margin-top: 36px;
-    padding-top: 16px;
-    border-top: 1px solid #1e2d40;
+    text-align: center !important;
+    color: #4B5563 !important;
+    font-size: 0.75rem !important;
+    margin-top: 36px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid #1e2d40 !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -161,20 +186,47 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown('<span class="q-label">Question 1 of 5</span><span class="q-text">What is your current role?</span>', unsafe_allow_html=True)
+st.markdown("""
+<div class="q-wrap">
+    <span class="q-label">Question 1 of 5</span>
+    <span class="q-text">What is your current role?</span>
+</div>
+""", unsafe_allow_html=True)
 q1 = st.selectbox("q1", ["Student", "Software Developer", "Backend Engineer", "DevOps Engineer", "Data Engineer", "IT Professional", "Career Switcher", "Other"], label_visibility="collapsed")
 
-st.markdown('<span class="q-label">Question 2 of 5</span><span class="q-text">What is your experience level?</span>', unsafe_allow_html=True)
+st.markdown("""
+<div class="q-wrap">
+    <span class="q-label">Question 2 of 5</span>
+    <span class="q-text">What is your experience level?</span>
+</div>
+""", unsafe_allow_html=True)
 q2 = st.selectbox("q2", ["No experience yet", "0-1 years", "1-3 years", "3-5 years", "5+ years"], label_visibility="collapsed")
 
-st.markdown('<span class="q-label">Question 3 of 5</span><span class="q-text">Which Cloud & AI areas interest you most?</span>', unsafe_allow_html=True)
+st.markdown("""
+<div class="q-wrap">
+    <span class="q-label">Question 3 of 5</span>
+    <span class="q-text">Which Cloud & AI areas interest you most?</span>
+</div>
+""", unsafe_allow_html=True)
 q3 = st.multiselect("q3", ["Azure DevOps & CI/CD", "Cloud Security & IAM", "AI Automation & Agents", "Machine Learning & MLOps", "Data Engineering", "Backend & API Development", "Infrastructure as Code", "Monitoring & Observability"], label_visibility="collapsed")
 
-st.markdown('<span class="q-label">Question 4 of 5</span><span class="q-text">What is your primary career goal?</span>', unsafe_allow_html=True)
+st.markdown("""
+<div class="q-wrap">
+    <span class="q-label">Question 4 of 5</span>
+    <span class="q-text">What is your primary career goal?</span>
+</div>
+""", unsafe_allow_html=True)
 q4 = st.selectbox("q4", ["Get my first cloud job", "Transition into AI/ML", "Get promoted to senior level", "Build my own AI product", "Upskill for current role", "Switch from backend to cloud/DevOps"], label_visibility="collapsed")
 
-st.markdown('<span class="q-label">Question 5 of 5</span><span class="q-text">How much time can you dedicate per week?</span>', unsafe_allow_html=True)
+st.markdown("""
+<div class="q-wrap">
+    <span class="q-label">Question 5 of 5</span>
+    <span class="q-text">How much time can you dedicate per week?</span>
+</div>
+""", unsafe_allow_html=True)
 q5 = st.selectbox("q5", ["1-2 hours", "3-5 hours", "5-10 hours", "10+ hours"], label_visibility="collapsed")
+
+st.markdown("<br>", unsafe_allow_html=True)
 
 if st.button("✦ Generate My CloudPath Roadmap"):
     if not q3:
@@ -245,7 +297,7 @@ Under each header write the content. Be specific, encouraging, and practical."""
                 if content.strip():
                     st.markdown(f"""
                     <div class="r-section">
-                        <div class="r-title">{icons.get(section,'')} {section}</div>
+                        <div class="r-title">{icons.get(section, '')} {section}</div>
                         <div class="r-content">{content.strip().replace(chr(10), '<br>')}</div>
                     </div>
                     """, unsafe_allow_html=True)
