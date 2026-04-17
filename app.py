@@ -48,7 +48,7 @@ if st.button("Generate My Roadmap"):
         st.warning("Please select at least one area of interest in question 3.")
     else:
         with st.spinner("Building your personalized roadmap..."):
-            client = Groq(api_key=st.secrets["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"])
+            client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
             prompt = f"""You are CloudPath AI, a career advisor specializing in Cloud and AI engineering careers.
 
