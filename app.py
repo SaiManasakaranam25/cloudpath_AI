@@ -1,5 +1,5 @@
 import streamlit as st
-import google.generativeai as genai
+from groq import Groq
 
 st.set_page_config(page_title="CloudPath AI", page_icon="🌐", layout="centered")
 
@@ -48,9 +48,8 @@ if st.button("Generate My Roadmap"):
         st.warning("Please select at least one area of interest in question 3.")
     else:
         with st.spinner("Building your personalized roadmap..."):
-            genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-            model = genai.GenerativeModel("gemini-2.0-flash")
-            
+            client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+
             prompt = f"""You are CloudPath AI, a career advisor specializing in Cloud and AI engineering careers.
 
 A user has answered 5 questions about their background:
@@ -77,16 +76,21 @@ Generate a personalized Cloud and AI career roadmap. Structure your response as:
 What they should be able to do or achieve in 6 months.
 
 **Recommended Resources**
-3-4 specific courses, certifications, or tools relevant to their interests.
+3-4 specific courses certifications or tools relevant to their interests.
 
 **Your Next Single Step**
 One clear action they should take today.
 
 Be specific, encouraging, and practical."""
 
-            response = model.generate_content(prompt)
+            response = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=1000
+            )
+
             st.markdown("### Your Personalized Roadmap")
-            st.markdown(response.text)
+            st.markdown(response.choices[0].message.content)
             st.success("Roadmap generated! Save this and revisit it in 30 days.")
 
 st.markdown("---")
